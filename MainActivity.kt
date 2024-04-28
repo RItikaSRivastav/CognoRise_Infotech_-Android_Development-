@@ -1,4 +1,4 @@
-package com.example.bmicalculator
+package com.example.to_dolist
 
 import android.content.Intent
 import android.os.Bundle
@@ -17,10 +17,13 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed(
+            {
+            val i = Intent(this, Addtasks::class.java)
+                startActivity(i)
 
-          val i= Intent(this,cardviewactivity::class.java )
-          startActivity(i)
-        }, 3000)
+            },3000)
+
+
     }
 }
